@@ -92,4 +92,17 @@ export const programs = [
     testnet_address: null,
     devnet_address: 'DLxB9dSQtA4WJ49hWFhxqiQkD9v6m67Yfk9voxpxrBs4',
   },
+  {
+    id: 8,
+    name: 'Cronos',
+    description:
+      'Cronos is an on-chain instruction scheduler for Solana. Developers can use Cronos to automate crank functions in their programs.',
+    image: null,
+    url: 'https://www.cronos.so/',
+    crate: 'https://docs.rs/cronos-program/0.0.17/cronos_program/',
+    github: 'https://github.com/cronos-so/cronos',
+    mainnet_address: 'CronpZj5NbHj2Nb6WwEtf6A9anty9JfEQ1RnGoshQBaW',
+    testnet_address: null,
+    devnet_address: null,
+  },
 ]
