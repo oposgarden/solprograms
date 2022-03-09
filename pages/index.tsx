@@ -49,7 +49,7 @@ const Home = ({ programs }: InferGetStaticPropsType<typeof getStaticProps>) => {
         <Grid xs={12} justify="center">
           <Input
             type="default"
-            placeholder="Search Programs"
+            placeholder="Search programs"
             onChange={handleChange}
             width="100%"
           />
