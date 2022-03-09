@@ -1,5 +1,7 @@
 # Welcome to Solana Programs ☀️
 
+Deployed at https://solprograms.vercel.app/
+
 This project aims to be a reference for programs available on the Solana chain (mainnet, devnet and testnet). Starting off as a simple display of some programs, the goal is to become a community effort where examples of usage of each program, with the ability to search for programs available on the chain and their implementation is provided. Aiming to bring out the composability of Solana out into the world and change it to a better place.
 
 If you'd like to join this journey please feel free to contribute. Soon I'll be opening a discord channel to discuss this and other projects in Solana 👀 join me on twitter [@johnanthos](https://twitter.com/johnanthos) to follow along.
