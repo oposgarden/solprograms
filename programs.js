@@ -79,4 +79,17 @@ export const programs = [
     testnet_address: null,
     devnet_address: '4skJ85cdxQAFVKbcGgfun8iZPL7BadVYXG3kGEGkufqA',
   },
+  {
+    id: 7,
+    name: 'Token vesting contract',
+    description:
+      'Simple vesting contract (SVC) developed by Bonfida that allows you to deposit X SPL tokens that are unlocked to a specified public key at a certain block height / slot.',
+    image: null,
+    url: 'https://github.com/Bonfida/token-vesting',
+    crate: null,
+    github: 'https://github.com/Bonfida/token-vesting',
+    mainnet_address: 'CChTq6PthWU82YZkbveA3WDf7s97BWhBK4Vx9bmsT743',
+    testnet_address: null,
+    devnet_address: 'DLxB9dSQtA4WJ49hWFhxqiQkD9v6m67Yfk9voxpxrBs4',
+  },
 ]
