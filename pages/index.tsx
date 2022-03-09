@@ -18,7 +18,10 @@ const Home = ({ programs }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [searchField, setSearchField] = useState('')
 
   const filteredPrograms = programs.filter((program) => {
-    return program.name.toLowerCase().includes(searchField.toLowerCase())
+    return (
+      program.name.toLowerCase().includes(searchField.toLowerCase()) ||
+      program.description.toLowerCase().includes(searchField.toLowerCase())
+    )
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
