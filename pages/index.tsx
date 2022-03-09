@@ -2,8 +2,8 @@ import type { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { programs } from '../programs'
-import { Box, Github } from '@geist-ui/icons'
-import { Grid, Card, Link, Page, Text } from '@geist-ui/core'
+import Program from '../components/ProgramCard'
+import { Grid, Page, Text } from '@geist-ui/core'
 
 export const getStaticProps = async () => {
   return {
@@ -37,54 +37,7 @@ const Home = ({ programs }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Grid.Container gap={1.5}>
         {programs.map((program) => (
           <Grid xs={24} sm={12} md={8} lg={6} justify="center" key={program.id}>
-            <Card
-              style={{ display: 'flex', flexDirection: 'column' }}
-              hoverable
-              width="100%"
-            >
-              <Link target="_blank" href={program.url}>
-                <Text h4 my={0}>
-                  {program.name}
-                </Text>
-              </Link>
-              <Text>
-                {program.description}
-                {program.mainnet_address && (
-                  <div>
-                    <Text font="12px" mt="24px" style={{ color: '#aaa' }}>
-                      Mainnet address:
-                      <br />
-                      {program.mainnet_address}
-                    </Text>
-                  </div>
-                )}
-                {program.devnet_address && (
-                  <div>
-                    <Text font="12px" mt="24px" style={{ color: '#aaa' }}>
-                      Devnet address:
-                      <br />
-                      {program.devnet_address}
-                    </Text>
-                  </div>
-                )}
-              </Text>
-              <Card.Footer
-                style={{
-                  marginTop: 'auto',
-                }}
-              >
-                {program.crate && (
-                  <Link color target="_blank" href={program.crate}>
-                    <Box size={16} />
-                  </Link>
-                )}
-                {program.github && (
-                  <Link color target="_blank" href={program.github}>
-                    <Github size={16} />
-                  </Link>
-                )}
-              </Card.Footer>
-            </Card>
+            <Program program={program} />
           </Grid>
         ))}
       </Grid.Container>
