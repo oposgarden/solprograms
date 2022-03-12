@@ -105,4 +105,18 @@ export const programs = [
     testnet_address: null,
     devnet_address: null,
   },
+  {
+    id: 9,
+    name: 'Candy Machine V2',
+    description:
+      'A fully on-chain generative NFT distribution program by Metaplex.',
+    image: null,
+    url: 'https://docs.metaplex.com/candy-machine-v2/introduction',
+    crate: 'https://crates.io/crates/mpl-candy-machine',
+    github:
+      'https://github.com/metaplex-foundation/metaplex-program-library/tree/master/candy-machine',
+    mainnet_address: 'cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ',
+    testnet_address: 'cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ',
+    devnet_address: 'cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ',
+  },
 ]
