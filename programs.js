@@ -119,4 +119,18 @@ export const programs = [
     testnet_address: 'cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ',
     devnet_address: 'cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ',
   },
+  {
+    id: 10,
+    name: 'Gem Farm 💎',
+    description:
+      'Gem Farm is a collection of on-chain Solana programs for NFT ("gem" 💎) staking.',
+    image: null,
+    url: 'https://www.gemfarm.gg/',
+    crate: null,
+    github:
+      'https://github.com/gemworks/gem-farm',
+    mainnet_address: 'farmL4xeBFVXJqtfxCzU9b28QACM7E2W2ctT6epAjvE',
+    testnet_address: 'farmL4xeBFVXJqtfxCzU9b28QACM7E2W2ctT6epAjvE',
+    devnet_address: 'farmL4xeBFVXJqtfxCzU9b28QACM7E2W2ctT6epAjvE',
+  },
 ]
