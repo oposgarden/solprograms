@@ -1,11 +1,14 @@
-import { programs } from '../../programs'
-import { Box, Github } from '@geist-ui/icons'
-import { Card, Link, Text } from '@geist-ui/core'
+import { programs } from "../../programs";
+import { Box, Github } from "@geist-ui/icons";
+import { Card, Link, Text, useToasts } from "@geist-ui/core";
+import copy from "copy-to-clipboard";
 
 const ProgramCard = ({ program }: { program: typeof programs[0] }) => {
+  const { setToast } = useToasts();
+
   return (
     <Card
-      style={{ display: 'flex', flexDirection: 'column' }}
+      style={{ display: "flex", flexDirection: "column" }}
       hoverable
       width="100%"
     >
@@ -14,30 +17,54 @@ const ProgramCard = ({ program }: { program: typeof programs[0] }) => {
           {program.name}
         </Text>
       </Link>
-      <Text>
-        {program.description}
-        {program.mainnet_address && (
-          <div>
-            <Text font="12px" mt="24px" style={{ color: '#aaa' }}>
-              Mainnet address:
-              <br />
-              {program.mainnet_address}
-            </Text>
-          </div>
-        )}
-        {program.devnet_address && (
-          <div>
-            <Text font="12px" mt="24px" style={{ color: '#aaa' }}>
-              Devnet address:
-              <br />
-              {program.devnet_address}
-            </Text>
-          </div>
-        )}
-      </Text>
+      <Text>{program.description}</Text>
+      {program.mainnet_address && (
+        <Text
+          font="12px"
+          mt="24px"
+          style={{
+            color: "#aaa",
+            cursor: "pointer",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            maxWidth: "260px",
+          }}
+          onClick={() => {
+            copy(program.mainnet_address.toString());
+            setToast({ text: "Mainnet address copied", delay: 2000 });
+          }}
+        >
+          Mainnet address:
+          <br />
+          {program.mainnet_address}
+        </Text>
+      )}
+      {program.devnet_address && (
+        <Text
+          font="12px"
+          mt="24px"
+          style={{
+            color: "#aaa",
+            cursor: "pointer",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            maxWidth: "260px",
+          }}
+          onClick={() => {
+            copy(program.devnet_address.toString());
+            setToast({ text: "Devnet address copied", delay: 2000 });
+          }}
+        >
+          Devnet address:
+          <br />
+          {program.devnet_address}
+        </Text>
+      )}
       <Card.Footer
         style={{
-          marginTop: 'auto',
+          marginTop: "auto",
         }}
       >
         {program.crate && (
@@ -52,7 +79,7 @@ const ProgramCard = ({ program }: { program: typeof programs[0] }) => {
         )}
       </Card.Footer>
     </Card>
-  )
-}
+  );
+};
 
-export default ProgramCard
+export default ProgramCard;
