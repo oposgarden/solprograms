@@ -3,7 +3,7 @@ export const programs = [
     id: 1,
     name: "Token Program",
     description:
-      "This program defines a common implementation for Fungible and Non Fungible tokens.    ",
+      "This program defines a common implementation for Fungible and Non Fungible tokens.",
     image: null,
     url: "https://spl.solana.com/token",
     crate: "https://crates.io/crates/spl-token",
